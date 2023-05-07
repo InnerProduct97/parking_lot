@@ -1,0 +1,134 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>PARKING LOT | NEW YORK</title>
+</head>
+<body>
+
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+        border: none;
+        font-family: sans-serif;
+        background-color: transparent;
+    }
+
+    .container{
+        background-color: #444444;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .list, .container .forms{
+        height: 80%;
+        width: 40%;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .list{
+        overflow-y: scroll;
+    }
+
+    .container .forms{
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid cornflowerblue;
+    }
+
+
+    table{
+        width: 100%;
+        border: 2px solid crimson;
+        border-collapse: collapse;
+        color: white;
+    }
+    td, tr, th{
+        border: 1px solid crimson;
+        padding: 10px;
+    }
+    td, th{
+        width: 50%;
+    }
+
+    th{
+        background-color: crimson;
+        color: white;
+    }
+
+
+    input{
+        border: 1px solid white;
+        padding: 10px 5px;
+        color: white;
+        width: 80%;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+
+
+    .heading{
+        color: cornflowerblue;
+        font-size: 50px;
+    }
+
+
+    button{
+        padding: 10px 40px;
+        background-color: cornflowerblue;
+        color: white;
+        margin: 10px 0;
+        font-weight: bold;
+        font-size: 22px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+
+    }
+
+    form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    </style>
+
+    <div class="container">
+        <div class="forms">
+            <h1 class="heading">Parking Lot</h1>
+            <form action="/entry" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                <input type="file" name="image" id="image" />
+                <input type="text" placeholder="Parking Lot" name="parkingLot" id="parkingLot" />
+                <button type="submit">ENTRY</button>
+            </form>
+            <br />
+            <form action="/exit" method="post">
+                    {% csrf_token %}
+
+                <input type="text" name="ticketId" placeholder="Ticket ID" />
+                <button type="submit">EXIT</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
