@@ -1,6 +1,6 @@
 ## Guidance
 1. Please make sure you have configured aws cli before running "setup.sh"
-2. Run "setup.sh"
+2. Download the scripts:"setup.sh","deploy.sh" and run setup.sh (alternatively you can clone this repository and run "setup.sh")
 
 ## Tests
 1. I provided sample images in "plates_images". You can use them while testing the web application.
