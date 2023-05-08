@@ -1,0 +1,80 @@
+Creating IAM role...
+IAM role created with ARN: arn:aws:iam::356933613987:role/RekognitionFullAccess_1683535979
+Creating IAM policy...
+IAM policy created with ARN: arn:aws:iam::356933613987:policy/RekognitionFullAccess-policy_1683535979
+Attaching policy to IAM role...
+Policy attached to IAM role
+Creating instance profile...
+Instance profile created with ARN: arn:aws:iam::356933613987:instance-profile/RekognitionFullAccess_1683535979
+Adding IAM role to instance profile...
+IAM role added to instance profile
+Creating security group...
+Security group created with ID: sg-0b2f9aa9bd55a9a1e
+Allowing SSH access to security group...
+{
+    "Return": true,
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-0047730c5a377db29",
+            "GroupId": "sg-0b2f9aa9bd55a9a1e",
+            "GroupOwnerId": "356933613987",
+            "IsEgress": false,
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22,
+            "CidrIpv4": "0.0.0.0/0"
+        }
+    ]
+}
+Allowing HTTPS access to security group...
+{
+    "Return": true,
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-053718f9427dcc29d",
+            "GroupId": "sg-0b2f9aa9bd55a9a1e",
+            "GroupOwnerId": "356933613987",
+            "IsEgress": false,
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443,
+            "CidrIpv4": "0.0.0.0/0"
+        }
+    ]
+}
+Allowing HTTP access to security group...
+{
+    "Return": true,
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-0734a9e9b1f0b649e",
+            "GroupId": "sg-0b2f9aa9bd55a9a1e",
+            "GroupOwnerId": "356933613987",
+            "IsEgress": false,
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80,
+            "CidrIpv4": "0.0.0.0/0"
+        }
+    ]
+}
+Security group created with ID: sg-0b2f9aa9bd55a9a1e
+Downloading PEM key...
+Creating EC2 instance...
+EC2 instance created with ID: i-0f7d22f1e1add49d4
+PEM key downloaded to WebServer_Security_1683535979.pem
+Waiting for instance to start up...
+Allocating Elastic IP...
+Elastic IP allocated with ID: eipalloc-036a75b37911f12c6
+Associating Elastic IP with instance...
+{
+    "AssociationId": "eipassoc-025788b3134f14578"
+}
+Elastic IP address created and associated with instance
+Instance IP address: 52.7.80.55
+Copying deploy script to instance...
+Warning: Permanently added '52.7.80.55' (ED25519) to the list of known hosts.
+deploy.sh                                                                                                   100% 2224    15.3KB/s   00:00    
+Running deploy script on instance...
+App is deployed successfully!
+You can access it through the URL:http://52.7.80.55/
