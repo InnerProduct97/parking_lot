@@ -16,7 +16,7 @@ curl --location 'http://<host_ip>/exit?ticketId=9'
 ```
 curl --location 'http://<host_ip>/entry' \
 --form 'image=@"/Users/InnerProduct97/Downloads/images.jpeg"' \
---form 'parkingLot="527h7h";type=application/json'
+--form 'parkingLot="314";type=application/json'
 ```
 ```
 curl --location 'http://<host_ip>/exit' --form 'ticketId="10";type=application/json'

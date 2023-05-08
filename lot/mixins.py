@@ -73,7 +73,8 @@ def fetch_number(uploaded_file):
         s = ''.join(re.findall(r'\d', txt))
         print(s)
         number_plate_number = None
-        if text['Type'] == 'LINE' and re.match(r'^[A-Z]{3}\s\d{4}$', txt):
+        # re.match(r'^[A-Z]{3}\s\d{4}$', txt)
+        if text['Type'] == 'LINE' and re.match(r'^[0-9]+$', txt):
             number_plate_number = text['DetectedText']
             break
 
