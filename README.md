@@ -3,7 +3,7 @@
 2. Run "setup.sh"
 
 ## Tests
-1. I provided sample images in "parking_lot/images". You can use them while testing the web application.
+1. I provided sample images in "plates_images". You can use them while testing the web application.
 2. You can use the "curl" utility.
 ### GET
 ```
@@ -19,6 +19,5 @@ curl --location 'http://<host_ip>/entry' \
 --form 'parkingLot="527h7h";type=application/json'
 ```
 ```
-curl --location 'http://<host_ip>/exit' \
---form 'ticketId="10";type=application/json'
+curl --location 'http://<host_ip>/exit' --form 'ticketId="10";type=application/json'
 ```
